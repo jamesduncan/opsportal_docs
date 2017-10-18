@@ -22,8 +22,9 @@ However, we want to edit the repository, so we'll check it out from git:
 $ cd your/development/directory/[sailsRoot]/node_modules
 $ git clone https://github.com/appdevdesigns/app_builder.git
 $ cd app_builder
-$ git checkout develop
+$ git checkout refactorFormWidgets
 $ npm update
+$ npm run build
 $ node setup/setup.js
 $ cd ../..
 ```
@@ -71,7 +72,16 @@ Now run sails again:
 $ sails lift
 ```
 
-And refresh your Ops Portal page.  
+All files that run the App Builder are compressed so each time you make a change to files located in the "assests" directory you need to run our compression script using "webpack".
+
+```sh
+$ cd your/development/directory/[sailsRoot]/node_modules/app_builder/
+$ ./node_modules/.bin/webpack
+```
+
+Be sure to look at the output of the webpack command because if there is any JS errors it will inform you.
+
+Finally, refresh your Ops Portal page.
 
 
 

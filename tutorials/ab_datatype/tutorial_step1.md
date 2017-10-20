@@ -14,7 +14,7 @@ After running the Developer Setup, you should have a `your/development/directory
 Now install the App Builder tool in your development environment.  If you just wanted to use the App Builder, you could install it like this:
 ```sh
 $ cd your/development/directory/[sailsRoot]
-$ npm install --save appdevdesigns/app_builder
+$ npm install --save appdevdesigns/app_builder#refactorFormWidgets
 ```
 
 However, we want to edit the repository, so we'll check it out from git:
